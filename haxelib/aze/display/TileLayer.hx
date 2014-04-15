@@ -1,7 +1,6 @@
 package aze.display;
 
-import browser.geom.Point;
-import haxe.Public;
+import nme.geom.Point;
 import nme.display.Bitmap;
 import nme.display.BitmapData;
 import nme.display.BlendMode;
@@ -180,6 +179,8 @@ class TileLayer extends TileGroup
 }
 
 
+
+
 /**
  * @private base tile type
  */
@@ -217,27 +218,27 @@ class TileBase
 /**
  * @private render buffer
  */
-class DrawList implements Public
+class DrawList 
 {
-	var list:Array<Float>;
-	var index:Int;
-	var fields:Int;
-	var offsetTransform:Int;
-	var offsetRGB:Int;
-	var offsetAlpha:Int;
-	var flags:Int;
-	var time:Int;
-	var elapsed:Int;
-	var runs:Int;
+	public var list:Array<Float>;
+	public var index:Int;
+	public var fields:Int;
+	public var offsetTransform:Int;
+	public var offsetRGB:Int;
+	public var offsetAlpha:Int;
+	public var flags:Int;
+	public var time:Int;
+	public var elapsed:Int;
+	public var runs:Int;
 
-	function new() 
+	public function new() 
 	{
 		list = new Array<Float>();
 		elapsed = 0;
 		runs = 0;
 	}
 
-	function begin(elapsed:Int, useTransforms:Bool, useAlpha:Bool, useTint:Bool, useAdditive:Bool) 
+	public function begin(elapsed:Int, useTransforms:Bool, useAlpha:Bool, useTint:Bool, useAdditive:Bool) 
 	{
 		#if !flash
 		flags = 0;
@@ -276,7 +277,7 @@ class DrawList implements Public
 		}
 	}
 
-	function end()
+	public function end()
 	{
 		if (list.length > index) 
 		{

@@ -22,7 +22,7 @@ class TilesheetEx extends Tilesheet
 	public var scale:Float;
 	var defs:Array<String>;
 	var sizes:Array<Rectangle>;
-	var anims:Hash<Array<Int>>;
+	var anims:Map<String, Array<Int>>;
 	#if flash
 	var bmps:Array<BitmapData>;
 	#end
@@ -33,7 +33,7 @@ class TilesheetEx extends Tilesheet
 		
 		scale = 1/textureScale;
 		defs = new Array<String>();
-		anims = new Hash<Array<Int>>();
+		anims = new Map<String, Array<Int>>();
 		sizes = new Array<Rectangle>();
 		#if flash
 		bmps = new Array<BitmapData>();
