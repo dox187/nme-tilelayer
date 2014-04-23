@@ -1,10 +1,10 @@
-nme-tilelayer
-=============
+nme(5)-tilelayer
+================
 
 A lightweight and very optimized wrapper over NME's powerful but lowlevel 'drawTiles' which offers the best rendering performance 
 (ie. batching) on native platforms.
 
-**See [NME RunnerMark][1] for a sample project using this library.**
+**See [NME5 RunnerMark][1] for a sample project using this library.**
 
  - provides a basic display-list, spritesheet animations, mirroring (tile flipping), scale X/Y,
  - includes a Sparrow spritesheet parser, supporting trimming,
@@ -18,8 +18,8 @@ having many textures and not doing batching is inefficient for GPU performance.
 
 Usage
 -----
-- install the library: type `haxelib install tilelayer` in your terminal
-- add `<haxelib name="tilelayer" />` in your nmml
+- install the library: type `haxelib git nme-tilelayer https://github.com/dox187/nme-tilelayer.git master haxelib` in your terminal
+- add `<haxelib name="nme-tilelayer" />` in your nmml
 
 Configure it:
 
@@ -148,5 +148,5 @@ License
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     THE SOFTWARE.
 
-[1]:https://github.com/elsassph/nme-runnermark
+[1]:https://github.com/dox187/nme-runnermark
 
